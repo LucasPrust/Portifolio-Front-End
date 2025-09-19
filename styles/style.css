@@ -1,0 +1,90 @@
+h1{
+   color: white;
+   
+}  
+
+p{
+ color: white;
+}
+
+input{
+    margin-top: 10px;
+    height: 50px;
+    width: 120px;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0 auto;
+    background-color: gray;
+}  
+
+.elemento-pai{
+    text-align: center;
+    
+}
+
+.input-submit{
+    display: block;
+    margin: 30px auto;
+    color: black;
+}
+
+h1{
+    text-align: center;
+    
+}
+
+.newspaper{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+
+.elemento-h1{
+    color: black;
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 10px 10px;
+    line-height: 50px;
+
+}
+
+img{
+    width: 300px;
+    margin-top: 20px;
+    
+}
+
+.bg-color{
+    background-color: gray;
+    padding: 10px 10px;
+    line-height: 20px;
+    display: flex;
+    margin-top: 20px;
+} 
+
+.elemento-mae{
+    text-align: center;
+    background-color: white;
+    margin-top: 20px;
+    line-height: 50px;
+} 
+
+.elemento-text{
+    text-align: center;
+    color: white;
+    background-color: blue;
+    margin-top: 20px;
+    line-height: 50px;
+}
+
+.elemento-filho{
+    text-align: center;
+    color: white;
+    background-color: black;
+    
+}

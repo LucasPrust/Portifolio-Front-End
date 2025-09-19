@@ -1,0 +1,97 @@
+body{
+  margin: 0;
+  font-family: 'Seoge UI', sans-serif;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #fff;
+}
+
+header {
+ background-color: rgba(0, 0, 50, 0.8);
+ padding: 1rem 2rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    color: #00ffff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  
+  
+  nav a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #00ffff;
+  }
+
+  .hero {
+    background: url('https://feelthebrain.files.wordpress.com/2020/11/astronautcliff.jpg?w=1400') no-repeat center center/cover;
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+  
+  
+  .hero h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+  }
+  
+  .hero button {
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .hero button:hover {
+    background-color: #00ccff;
+    transform: scale(1.05);
+  }
+  
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .galeria {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .galeria img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.1);
+  }
+  
+  footer {
+    background-color: #111;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  

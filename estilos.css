@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #3e2f1c;
+    background-color: #fdfaf6;
+  }
+  
+  
+  header {
+    background: linear-gradient(to right, #4B2E2E, #F5F5DC);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: yellow;
+  }
+  
+  
+  .banner {
+    position: relative;
+    background-image: url("https://cdn5.vectorstock.com/i/1000x1000/66/99/coffee-logo-design-inspiration-vector-30896699.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+  }
+  
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .banner-texto {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  .banner-texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .banner-texto p {
+    font-size: 1.2em;
+  }
+  
+  
+  .produtos {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .grade-produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .produto {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .produto:hover {
+    transform: scale(1.05);
+  }
+  
+  .produto img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .redes-sociais {
+    margin-top: 10px;
+  }
+  
+  .redes-sociais a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .redes-sociais a:hover {
+    color: #ffd700;
+  }
+  

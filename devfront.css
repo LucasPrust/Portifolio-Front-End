@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px 0;
+  }
+
+  .menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-navegacao h3{
+    margin-right: auto;
+    margin-left: 30px;
+    font-size: 20px;
+  }
+
+  .menu-navegacao a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .menu-navegacao a:hover{
+    color: #00bcd4;
+  }
+
+  section{
+    padding: 40px;
+    text-align: center;
+  }
+
+  section h1{
+    color: #1e1e2f;
+    margin-bottom: 10px;
+  }
+
+  section h2{
+    color: #00bcd4;
+    margin-bottom: 5px;
+  }
+
+  table{
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: white;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+  }
+
+  th{
+    background-color: #1e1e2f;
+    color: white;
+  }
+
+  footer{
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  iframe {
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+ button{
+  display: inline-block;
+  background:  #00bcd4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 20px;
+ }
+
+ button:hover{
+    background: #1e1e2f;
+ }
+
+ a{
+    margin-right: 8px;
+    margin-bottom: 20px;
+ }
+
+ h3:hover{
+  color:  #00bcd4;
+ }
+

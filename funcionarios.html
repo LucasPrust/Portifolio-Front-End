@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funcionários</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #34495e;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tfoot td {
+      background-color: #ecf0f1;
+      font-weight: bold;
+      text-align: left;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Restaurante Sabor & Arte - Sistema de Gerenciamento</h2>
+    <nav>
+      <ul>
+        <li><a href="paginaprincipal.html">Página Inicial</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="funcionarios.html">Funcionários</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="Funcionários">
+      <h2>Dados dos Funcionários</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID do Funcionário</th>
+            <th>Nome Completo</th>
+            <th>Cargo</th>
+            <th>Turno de Trabalho</th>
+            <th>Data de Admissão</th>
+            <th>Salário</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Carlos Silva</td>
+            <td>Chef de Cozinha</td>
+            <td>Tarde/Noite</td>
+            <td>15/03/2020</td>
+            <td>R$ 5.200,00</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Ana Santos</td>
+            <td>Chef de Cozinha</td>
+            <td>Manhã/Tarde</td>
+            <td>22/08/2021</td>
+            <td>R$ 4.800,00</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>João Oliveira</td>
+            <td>Garçom</td>
+            <td>Noite</td>
+            <td>10/01/2022</td>
+            <td>R$ 2.100,00</td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>Maria Costa</td>
+            <td>Garçom</td>
+            <td>Tarde</td>
+            <td>05/05/2022</td>
+            <td>R$ 2.100,00</td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Pedro Martins</td>
+            <td>Auxiliar de Cozinha</td>
+            <td>Manhã</td>
+            <td>18/11/2022</td>
+            <td>R$ 1.800,00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">📞 <strong>Número de Telefone:</strong> (22) 99899-7462</td>
+          </tr>
+          <tr>
+            <td colspan="6">📧 <strong>E-mail:</strong> restaurantesaborarte@hotmail.com</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    caption {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #ecf0f1;
+    }
+
+    tfoot {
+      background-color: #f9f9f9;
+      font-weight: bold;
+    }
+
+    tfoot td {
+      text-align: left;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Restaurante Sabor & Arte - Sistema de Gerenciamento</h2>
+    <nav>
+      <ul>
+        <li><a href="paginaprincipal.html">Página Inicial</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="funcionarios.html">Funcionários</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cardapio">
+      <h2>Cardápio do Restaurante</h2>
+      <table>
+        <caption>Pratos</caption>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome do Prato</th>
+            <th>Categoria</th>
+            <th>Ingredientes Principais</th>
+            <th>Preço (R$)</th>
+            <th>Disponibilidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>Feijoada Completa</td>
+            <td>Prato Principal</td>
+            <td>Feijão preto, carnes, couve, torresmo</td>
+            <td>R$ 42,90</td>
+            <td>Disponível</td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Moqueca de Peixe</td>
+            <td>Prato Principal</td>
+            <td>Peixe, leite de coco, dendê, camarão</td>
+            <td>R$ 38,50</td>
+            <td>Disponível</td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Bruschetta Italiana</td>
+            <td>Entrada</td>
+            <td>Pão italiano, tomate, manjericão, azeite</td>
+            <td>R$ 18,90</td>
+            <td>Disponível</td>
+          </tr>
+          <tr>
+            <td>004</td>
+            <td>Tiramisu</td>
+            <td>Sobremesa</td>
+            <td>Café, mascarpone, biscoito champagne, cacau</td>
+            <td>R$ 22,00</td>
+            <td>Disponível</td>
+          </tr>
+          <tr>
+            <td>005</td>
+            <td>Caipirinha</td>
+            <td>Bebida</td>
+            <td>Cachaça, limão, açúcar, gelo</td>
+            <td>R$ 16,90</td>
+            <td>Disponível</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">📞 <strong>Telefone:</strong> (22) 99899-7462</td>
+          </tr>
+          <tr>
+            <td colspan="6">📧 <strong>E-mail:</strong> restaurantesaborarte@hotmail.com</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

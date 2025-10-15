@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Formulário DOM com Bootstrap (Onclick)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container col-lg-5 col-md-7 col-sm-10">
+        <h1 class="mb-4 text-center">Captura de Dados com Bootstrap (Onclick)</h1>
+
+        <form>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Digite seu nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            
+            <button type="button" class="btn btn-primary w-100" onclick="processarFormulario()">
+                Enviar e Saudação
+            </button>
+        </form>
+
+        <div id="resposta" class="alert mt-4 d-none" role="alert">
+            </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="bootstrap e dom.js"></script> 
+</body>
+</html>

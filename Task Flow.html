@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="Task Flow.css"/>
+</head>
+<body>
+  <header>
+    <h1>TaskFlow</h1>
+    <p>Organize suas tarefas por cliente e prioridade</p>
+  </header>
+
+  <section id="formulario-tarefa">
+    <input type="text" id="titulo" placeholder="Título da tarefa" required />
+    <input type="text" id="cliente" placeholder="Cliente ou projeto" />
+    <input type="date" id="prazo" />
+    <select id="prioridade">
+      <option value="Alta">Alta</option>
+      <option value="Média">Média</option>
+      <option value="Baixa">Baixa</option>
+    </select>
+    <button id="adicionar">Adicionar tarefa</button>
+  </section>
+
+  <section id="lista-tarefas">
+ 
+  </section>
+
+  <script src="Task Flow.js"></script>
+</body>
+</html>

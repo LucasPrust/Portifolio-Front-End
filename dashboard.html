@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Financeiro - Dashboard de Acompanhamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <style>
+        /* CORREÇÃO: Necessário para a Navbar fixa */
+        body {
+            padding-top: 70px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">Sistema de Gestão Financeira</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+                </ul>
+                <button class="btn btn-danger" type="button" onclick="alert('Relatório emitido com sucesso!')">
+                    Emitir Relatório
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="mb-4 text-primary">Acompanhamento Financeiro</h2>
+
+        <div class="row mb-4">
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card text-white bg-success shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Faturado Mês</h5>
+                        <p class="card-text fs-3 fw-bold" id="kpiFaturado">R$ 5.500,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card text-white bg-warning shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Pendente Mês</h5>
+                        <p class="card-text fs-3 fw-bold" id="kpiPendente">R$ 1.800,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-3">
+                <div class="card text-dark bg-light shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Média/Cliente</h5>
+                        <p class="card-text fs-3 fw-bold" id="kpiMedia">R$ 1.500,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-5 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header fw-bold">Status de Faturamento</div>
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <canvas id="graficoStatus"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header fw-bold">Receita nos Últimos 4 Meses</div>
+                    <div class="card-body">
+                         <canvas id="graficoMensal"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Dados de Simulação Únicos ---
+        const dados = {
+            faturado: 5500,
+            pendente: 1800,
+            meses: ['Jul', 'Ago', 'Set', 'Out'],
+            receita: [4200, 3500, 6800, 5500]
+        };
+
+        // --- Função Principal que Renderiza Tudo ---
+        function inicializarDashboard() {
+            // 1. Atualiza KPIs
+            document.getElementById('kpiFaturado').textContent = `R$ ${dados.faturado.toFixed(2).replace('.', ',')}`;
+            document.getElementById('kpiPendente').textContent = `R$ ${dados.pendente.toFixed(2).replace('.', ',')}`;
+
+            // 2. Cria Gráfico de Status (Rosca)
+            new Chart(document.getElementById('graficoStatus').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Faturado', 'Pendente'],
+                    datasets: [{
+                        data: [dados.faturado, dados.pendente],
+                        backgroundColor: ['rgba(40, 167, 69, 0.8)', 'rgba(255, 193, 7, 0.8)'],
+                        hoverOffset: 10
+                    }]
+                },
+                options: { maintainAspectRatio: true, plugins: { legend: { position: 'bottom' }, title: { display: false } } }
+            });
+
+            // 3. Cria Gráfico Mensal (Barras)
+            new Chart(document.getElementById('graficoMensal').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: dados.meses,
+                    datasets: [{
+                        label: 'Receita (R$)',
+                        data: dados.receita,
+                        backgroundColor: 'rgba(0, 123, 255, 0.7)',
+                        borderWidth: 1
+                    }]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+            });
+        }
+
+        // Executa a função principal ao carregar a página
+        window.onload = inicializarDashboard;
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

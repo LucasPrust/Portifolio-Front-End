@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Interativo</title>
+  <link rel="stylesheet" href="Quiz.css" />
+</head>
+<body>
+  <main id="quiz">
+    <h1 id="quiz-titulo">Quiz do Flamengo</h1>
+    <section id="pergunta"></section>
+    <nav id="alternativas"></nav>
+    <p id="feedback"></p>
+    <button onclick="proximaPergunta()" id="proximo" style="display:none;">Próxima</button>
+  </main>
+
+  <script>
+      const perguntas = [
+            {
+                pergunta: "Em qual ano o Flamengo foi fundado?",
+                alternativas: ["1895", "1902", "1912", "1800"],
+                respostaCorreta: 0
+            },
+            {
+                pergunta: "Quem é considerado o maior ídolo do Flamengo?",
+                alternativas: [
+                    "Zico",
+                    "Romário", 
+                    "Ronaldinho",
+                    "Adriano Imperador"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "Contra qual time o Flamengo Conquistou seu primeiro Mundial?",
+                alternativas: [
+                "Liverpool",
+                "Real Madrid",
+                "Boca Juniors"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "Quantas vezes o Flamengo conquistou a Copa Libertadores?",
+                alternativas: [
+                "3",
+                "2",
+                "4"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "Quantos Campeonatos Cariocas o Flamengo tem?",
+                alternativas: [
+                 "37",
+                 "25",
+                 "40"
+                ],
+                respostaCorreta: 0 
+            },
+
+            {
+                pergunta: "Onde o Flamengo manda seus jogos oficiais?",
+                alternativas: [
+                "Maracanã",
+                "Morumbi",
+                "Engenhão"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "Qual era a cor original do Flamengo antes do rubro-negro?",
+                alternativas: [
+                "Azul e Ouro",
+                "Verde e Branco",
+                "Amarelo e preto"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "O Flamengo já foi rebaixado alguma vez?",
+                alternativas: [
+                 "Sim",
+                "Não",
+                "Apenas no Futebol Feminino"
+                ],
+                respostaCorreta: 1
+            },
+
+           
+
+            {
+                pergunta: "Qual o Maior Rival do Flamengo",
+                alternativas: [
+                 "Vasco Da Gama",
+                "Fluminense",
+                "Botafogo"
+                ],
+                respostaCorreta: 0
+            },
+
+            {
+                pergunta: "Em que esporte o Flamengo foi fundado antes de criar o time de futebol?",
+                alternativas: [
+                 "Remo",
+                "Basquete",
+                "Vôlei"
+                ],
+                respostaCorreta: 0
+            },
+        ];
+
+        let perguntaAtual = 0;
+        let acertos = 0;
+
+        function carregarPergunta() {
+            const p = perguntas[perguntaAtual];
+            document.getElementById('pergunta').innerHTML = `<h3>${p.pergunta}</h3>`;
+            
+            let htmlAlternativas = '';
+            p.alternativas.forEach((alt, index) => {
+                htmlAlternativas += `<button onclick="verificarResposta(${index})">${alt}</button> `;
+            });
+            document.getElementById('alternativas').innerHTML = htmlAlternativas;
+            
+            document.getElementById('feedback').innerHTML = '';
+            document.getElementById('proximo').style.display = 'none';
+        }
+
+        function verificarResposta(resposta) {
+            const p = perguntas[perguntaAtual];
+            const feedback = document.getElementById('feedback');
+            
+            if (resposta === p.respostaCorreta) {
+                feedback.innerHTML = '✅ Correto!';
+                acertos++;
+            } else {
+                feedback.innerHTML = `❌ Errado! A resposta correta é: ${p.alternativas[p.respostaCorreta]}`;
+            }
+            
+            document.getElementById('proximo').style.display = 'block';
+            
+            
+            const botoes = document.querySelectorAll('#alternativas button');
+            botoes.forEach(botao => {
+                botao.disabled = true;
+            });
+        }
+
+        function proximaPergunta() {
+            perguntaAtual++;
+            
+            if (perguntaAtual < perguntas.length) {
+                carregarPergunta();
+            } else {
+               
+                document.getElementById('quiz').innerHTML = `
+               <h2>Quiz Concluído!</h2>
+               <p>Você acertou ${acertos} de ${perguntas.length} perguntas</p>
+              <button id="botao-jogar-novamente" onclick="reiniciarQuiz()">Jogar Novamente</button>`;
+                                                                                              
+
+            }
+        }
+
+        function reiniciarQuiz() {
+            perguntaAtual = 0;
+            acertos = 0;
+            document.getElementById('quiz').innerHTML = `
+                <h2>Quiz de História do Brasil</h2>
+                <div id="pergunta"></div>
+                <div id="alternativas"></div>
+                <p id="feedback"></p>
+                <button onclick="proximaPergunta()" id="proximo" style="display:none;">Próxima</button>
+            `;
+            carregarPergunta();
+        }
+
+      
+        carregarPergunta();
+    </script>
+</body>
+</html>  

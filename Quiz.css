@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #quiz {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ff0000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #quiz h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  #pergunta {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #000;
+    text-align: center;
+  }
+  
+  #alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  #alternativas button {
+    background-color: #cc0000;
+    color: white;
+    border: 2px solid #5f0808;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #alternativas button:hover {
+    background: #000;
+    color: #fff;
+  }
+  
+  #feedback {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    height: 24px;
+    text-align: center;
+  }
+  
+  #proximo {
+    display: none;
+    margin: 0 auto;
+    background: #fff;
+    color: #cc0000;
+    border: 2px solid #cc0000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #proximo:hover {
+    background: #cc0000;
+    color: #fff;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 200px;
+    background-image: url('https://4.bp.blogspot.com/-1Bfo5QfoUcE/Xte4g6ZpcMI/AAAAAAACanA/SKuvSIj3gKYCJbtDvpdR0XQOqURBJL8ugCLcBGAsYHQ/s1600/maracana%2Bflamengo%2Btorcida.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url('https://getwallpapers.com/wallpaper/full/1/e/a/883340-cool-flamengo-wallpapers-1920x1080-windows-10.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+ 
+  
+  #botao-jogar-novamente {
+    background-color: #cc0000;
+    color: white;
+    border: 2px solid #990000;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #botao-jogar-novamente:hover {
+    background-color: #000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  #quiz p {
+    margin-bottom: 20px;
+  }
+  
+  #quiz h2 {
+    margin-bottom: 20px; 
+  }
+  
+  #quiz p {
+    margin-top: 20px; 
+  }
+  

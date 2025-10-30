@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef6e4;
+}
+
+header{
+    background-color: #f582ae;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a{
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+
+.vitrine{
+    padding: 40px;
+    text-align: center;
+}
+
+.produtos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+.produto img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer{
+ background-color: #f582ae;
+ color: white;
+ text-align: center;
+ padding: 10PX;
+}
+
+h2{
+    padding: 20px;
+    color: #f582ae;
+}
+
+h1{
+    padding: 20px;
+}
+
+nav a:hover{
+ color: #c31f5e;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    flex: 1;
+  }
+  
+  h3{
+    color: #f582ae;
+  }
+
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+p{
+    margin-bottom: 20px;
+   color: #000;
+}
+
+footer a:hover{
+    color: #c31f5e;
+}
+
+button{
+    font-size: 20px;
+    display: flex;
+    background: #f582ae;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:hover{
+    transform: translateX(20px);
+}
+
+
+.produto {
+    background-color: #ffffff;
+    border: 2px solid #f582ae;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    display: flex;             
+    flex-direction: column;    
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   align-items: center;
+  }
+  
+  .produto button {
+    margin-top: auto;         
+    font-size: 20px;
+    display: flex;
+    background: #f582ae;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .produto:hover{
+    transform: translateY(10px);
+  }
+
+  .texto-footer{
+    color: #ffffff;
+  }
+
+ form{
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    margin: 40px;
+ }
+
+ form h2{
+    margin-bottom: 20px;
+ }
+
+ form label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #f582ae;
+    font-size: 20px;
+ }
+
+ form input,
+ form textarea{
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #c31f5e;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+ }
+
+.formulario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px
+}

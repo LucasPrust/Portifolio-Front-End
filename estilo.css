@@ -11,7 +11,7 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Cabeçalho - usando display block */
+
 header {
     background: linear-gradient(to right, #1a2a6c, #2b5876);
     color: white;
@@ -19,7 +19,7 @@ header {
     text-align: center;
 }
 
-/* Navegação - usando display inline-block */
+
 nav {
     background-color: #2c3e50;
     padding: 10px;
@@ -49,7 +49,7 @@ nav ul li a:hover {
     color: #3498db;
 }
 
-/* Conteúdo principal - usando display block */
+
 main {
     width: 90%;
     max-width: 1200px;
@@ -60,7 +60,7 @@ main {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Seção de produtos - usando display inline-block */
+
 .produtos {
     margin: 20px 0;
 }
@@ -114,7 +114,7 @@ main {
     background-color: #2ecc71;
 }
 
-/* Seção de promoções - usando display block */
+
 .promocoes {
     background-color: #fff4e6;
     border-left: 5px solid #e67e22;
@@ -128,7 +128,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* Rodapé - usando display block */
+
 footer {
     background-color: #2c3e50;
     color: white;
@@ -141,7 +141,7 @@ footer p {
     margin: 5px 0;
 }
 
-/* Elementos inline para informações de contato */
+
 .contato span {
     color: #3498db;
     font-weight: bold;
